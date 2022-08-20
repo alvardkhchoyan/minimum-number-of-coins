@@ -1,9 +1,11 @@
 #include <iostream>
 #include <vector>
 
-int minCoins(std::vector<int> coins, int maney) {
+int minCoins(const std::vector<int>& coins, int maney) {
 
-    if (maney == 0) return 0;
+    if (maney == 0) {
+	return 0;
+    }	    
     int amount = maney + 1;
     for (int i = 0; i < coins.size(); ++i) {
         if (coins[i] <= maney) {
